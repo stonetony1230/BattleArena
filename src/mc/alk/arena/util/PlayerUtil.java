@@ -91,7 +91,7 @@ public class PlayerUtil {
 			try{
 				CommandSender cs = cls.isConsoleSender() ? Bukkit.getConsoleSender() : p;
 				if (Defaults.DEBUG_TRANSITIONS) {Log.info("BattleArena doing command '"+cls.getCommand(name)+"' as "+cs.getName());}
-				doCommand(p,cls.getCommand(name));
+				doCommand(cs,cls.getCommand(name));
 			} catch (Exception e){
 				Log.err("[BattleArena] Error executing command as console or player");
 				Log.printStackTrace(e);
