@@ -173,7 +173,7 @@ public class TeleportLocationController {
 			}
 			ph = am;
 			type = LocationType.ARENA;
-			l = arena.getSpawn(teamIndex,false);
+			l = arena.getSpawn(teamIndex,mo.hasOption(TransitionOption.RANDOMSPAWN));
 		}
 		return new ArenaLocation(ph, l,type);
 	}
